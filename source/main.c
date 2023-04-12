@@ -55,15 +55,15 @@ int main(int argc, char **argv)
 
 void checkHostnames() 
 {
-    printf("DNS Host Test-App 1.0.4_de\n\n");
+    printf("DNS Block Tester 1.0.4\n\n");
 
     // Check if system says we're connected to a network (wifi or ethernet)
     Result net_rc = nifmGetInternetConnectionStatus(NULL, NULL, NULL);
     if (R_FAILED(net_rc)) {
-        printf(CONSOLE_RED "WARNUNG, MIT KEINEM NETZWERK VERBUNDEN! FLUGZEUG MODUS?\n" CONSOLE_RESET);
+        printf(CONSOLE_RED "ACHTUNG, KEINE VERBINDUNG MIT EINEM NETZWERK! FLUGZEUG-MODUS?\n" CONSOLE_RESET);
     }
 
-    printf("Teste:\n");
+    printf("Testen:\n");
 
     // Iterate through hostnames array
     for (int i = 0; i < sizeof(hostnames)/sizeof(hostnames[0]); i++)
@@ -83,13 +83,13 @@ void checkHostnames()
         printf("\x1b[3D");
         switch(result) {
             case DNS_BLOCKED:
-                printf(CONSOLE_GREEN "geblockt");
+                printf(CONSOLE_GREEN "Blockiert");
                 break;
             case DNS_RESOLVED:
-                printf(CONSOLE_RED "nicht geblockt");
+                printf(CONSOLE_RED "NICHT Blockiert");
                 break;
             case DNS_UNRESOLVED:
-                printf(CONSOLE_YELLOW "ungeloest");
+                printf(CONSOLE_YELLOW "NICHT aufgeloest");
                 break;
         }
 
@@ -99,7 +99,7 @@ void checkHostnames()
         consoleUpdate(console);
     }
 
-    printf("\nDruecke B zum Beenden. Druecke X zum wiederholen.");
+    printf("\nDruecke B zum Beenden. Druecke X fuer erneuten Test.");
     consoleUpdate(console);
 }
 
