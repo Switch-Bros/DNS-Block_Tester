@@ -55,7 +55,7 @@ int main(int argc, char **argv)
 
 void checkHostnames() 
 {
-    printf("DNS Block Tester 1.0.4\n\n");
+    printf("DNS-Block Tester 1.0.4\n\n");
 
     // Check if system says we're connected to a network (wifi or ethernet)
     Result net_rc = nifmGetInternetConnectionStatus(NULL, NULL, NULL);
