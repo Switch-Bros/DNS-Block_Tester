@@ -44,7 +44,7 @@ DATA		:=	data
 INCLUDES	:=	include
 
 APP_VERSION := 1.0.4
-APP_TITLE   := DNS-Block Tester
+APP_TITLE   := 
 APP_AUTHOR  := Nexrem / SwitchBros.
 ICON        := appicon.jpg
 
