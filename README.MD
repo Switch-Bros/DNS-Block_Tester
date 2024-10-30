@@ -1,5 +1,5 @@
-# 90DNS Tester
-A simple switch homebrew that does DNS resolution to see if we reach Nintendo's servers. This can also be used to test if Atmosphere's DNS MITM is working properly
+# DNS-Block_Tester
+Eine einfache Switch homebrew App um zu Testen ob die Nintendo Server geblockt werden. Kann ebenfalls benutzt werden um zu testen ob atmosphere's DNS MITM Modul korrekt funktioniert!
 
 
 ![screenshot.jpg](screenshot.jpg?raw=true)
